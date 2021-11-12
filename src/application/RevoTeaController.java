@@ -87,8 +87,6 @@ public class RevoTeaController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-	//	cartCount++;
-		//ordersInCart.setText("orders:" + cartCount);
 	};
 	
 	public void switchToBobaOrder(ActionEvent event) throws IOException {
@@ -127,47 +125,9 @@ public class RevoTeaController {
     @FXML
     private Button remove1;
     @FXML
+    
     private Button add1;
     
-    @FXML
-    private Button remove2;
-    @FXML
-    private Button add2;
-    
-    @FXML
-    private Button remove3;
-    @FXML
-    private Button add3;
-    
-    @FXML
-    private Button remove4;
-    @FXML
-    private Button add4;
-    
-    @FXML
-    private Button remove5;
-    @FXML
-    private Button add5;
-    
-    @FXML
-    private Button remove6;
-    @FXML
-    private Button add6;
-    
-    @FXML
-    private Button remove7;
-    @FXML
-    private Button add7;
-    
-    @FXML
-    private Button remove8;
-    @FXML
-    private Button add8;
-    
-    @FXML
-    private Button remove9;
-    @FXML
-    private Button add9;
     @FXML
     void removeBtn1(ActionEvent event) {
     	aCount--;
@@ -175,173 +135,14 @@ public class RevoTeaController {
     	{
     		aCount = 0;
     	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
     	 ordersInCart.setText("Orders in Cart: " + aCount);
     }
     
     @FXML
     void addBtn1(ActionEvent event) {
     	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
 		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    
-    @FXML
-    void removeBtn2(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn2(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-
-    
-   
-    @FXML
-    void removeBtn3(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn3(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-  
-    
-    @FXML
-    void removeBtn4(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn4(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    
-    @FXML
-    void removeBtn5(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn5(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    
-    @FXML
-    void removeBtn6(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    
-    @FXML
-    void addBtn6(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn7(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void removeBtn7(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void removeBtn8(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn8(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void removeBtn9(ActionEvent event) {
-    	aCount--;
-    	if (aCount < 0)
-    	{
-    		aCount = 0;
-    	}
-    	 //labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-    	 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    @FXML
-    void addBtn9(ActionEvent event) {
-    	aCount++;	 
-		// labeltest.setText(String.valueOf("Total : " + bobaPrice*aCount));
-		 ordersInCart.setText("Orders in Cart: " + aCount);
-    }
-    
-    
-    
-    
+    }    
     
     
   //*********** SignUp******************************

@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -18,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
    <children>
       <HBox prefHeight="97.0" prefWidth="500.0">
          <children>
@@ -37,15 +31,15 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" prefHeight="413.0" prefWidth="500.0">
+      <GridPane alignment="CENTER" prefHeight="449.0" prefWidth="500.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="150.0" minHeight="100.0" prefHeight="139.0" />
-          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="156.0" minHeight="100.0" prefHeight="154.0" />
+          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="143.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -72,14 +66,22 @@
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToToppings" prefHeight="27.0" prefWidth="74.0" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="1">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Black_Sesam_Hoji.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -87,25 +89,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove2" mnemonicParsing="false" onAction="#removeBtn2" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn2" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="2">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/brown_sugar_milk.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -113,25 +123,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove3" mnemonicParsing="false" onAction="#removeBtn3" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn3" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.rowIndex="1">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Hong_Kong_MT.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -139,25 +157,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove4" mnemonicParsing="false" onAction="#removeBtn4" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn4" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Lavender_Rose.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -165,25 +191,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove5" mnemonicParsing="false" onAction="#removeBtn5" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn5" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Matcha_Latte.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -191,25 +225,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove6" mnemonicParsing="false" onAction="#removeBtn6" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn6" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.rowIndex="2">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Taro_milk.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -217,25 +259,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove7" mnemonicParsing="false" onAction="#removeBtn7" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn7" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Watermelon_Oat.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -243,25 +293,33 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove8" mnemonicParsing="false" onAction="#removeBtn8" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn8" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
                   <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                        <Image url="@../../bin/application/image/drink/Yokult_Green_Tea.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="9.0" />
@@ -269,18 +327,26 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button fx:id="remove9" mnemonicParsing="false" onAction="#removeBtn9" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="add9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn9" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" onAction="#switchToToppings" text="Toppings">
+                     <VBox.margin>
+                        <Insets left="47.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
          </children>
@@ -292,7 +358,7 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
-            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" onAction="#switchToLogout" text="Logout">
+            <Button mnemonicParsing="false" onAction="#switchToLogout" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Logout">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

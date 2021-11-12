@@ -201,7 +201,7 @@
       </GridPane>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
-            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
+            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" onAction="#switchToBobaOrder" text="Go Back">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
