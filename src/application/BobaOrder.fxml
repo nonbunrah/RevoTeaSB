@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -12,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
    <children>
       <HBox prefHeight="97.0" prefWidth="500.0">
          <children>
@@ -55,12 +61,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove1" mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -81,12 +87,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove2" mnemonicParsing="false" onAction="#removeBtn2" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn2" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -107,12 +113,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove3" mnemonicParsing="false" onAction="#removeBtn3" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn3" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -133,12 +139,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove4" mnemonicParsing="false" onAction="#removeBtn4" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn4" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -159,12 +165,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove5" mnemonicParsing="false" onAction="#removeBtn5" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn5" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -185,12 +191,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove6" mnemonicParsing="false" onAction="#removeBtn6" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn6" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -211,12 +217,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove7" mnemonicParsing="false" onAction="#removeBtn7" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn7" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -237,12 +243,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove8" mnemonicParsing="false" onAction="#removeBtn8" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn8" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -263,12 +269,12 @@
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                        <Button fx:id="remove9" mnemonicParsing="false" onAction="#removeBtn9" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                        <Button fx:id="add9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn9" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
