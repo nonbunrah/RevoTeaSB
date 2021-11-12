@@ -48,7 +48,7 @@
     <Label text="UserName : " GridPane.columnIndex="0" GridPane.rowIndex="3">
     </Label>
     <!-- Add username Text Field -->
-    <TextField fx:id="userField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <TextField fx:id="usernameField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 	
 	
 

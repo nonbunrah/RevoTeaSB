@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -188,6 +189,7 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Label>
+      <TextField fx:id="nameTextField" />
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
             <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">

@@ -11,7 +11,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/application/BobaOrder.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/application/SignUp.fxml"));
 			
 			Scene scene = new Scene(root,500,800);
 			
