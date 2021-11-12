@@ -10,7 +10,7 @@
 
 <AnchorPane accessibleText="ReVo Tea" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: f8e192;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
    <children>
-      <Button alignment="CENTER" layoutX="203.0" layoutY="361.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="39.0" prefWidth="95.0" text="SignUp">
+      <Button alignment="CENTER" layoutX="203.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToSignUp" prefHeight="39.0" prefWidth="95.0" text="SignUp">
          <font>
             <Font size="18.0" />
          </font>

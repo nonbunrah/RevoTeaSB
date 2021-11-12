@@ -46,6 +46,21 @@ public class RevoTeaController {
 	@FXML
 	private Button beelongTeaLblButton;
 	
+	public void switchToLogin(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	};
+	
+	public void switchToSignUp(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("/application/SignUp.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	};
 	
 	public void switchToToppings(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/Toppings.fxml"));
@@ -137,7 +152,7 @@ public class RevoTeaController {
               return;
           }
           if (isValid(email)== false) {
-          	 showAlert(Alert.AlertType.ERROR, owner, "Invalid email"," Invalid email!!!!\nPlease choose another one");
+          	 showAlert(Alert.AlertType.ERROR, owner, "Invalid email"," Invalid email -\nPlease choose another one");
           	 return;
           	}
           
@@ -150,12 +165,12 @@ public class RevoTeaController {
           	if (columnDetail[1].equals(email)) {
           		System.out.println(columnDetail[1]);
           		check = false;
-          		showAlert(Alert.AlertType.ERROR, owner, "Warning","Existed Email!!!!");
+          		showAlert(Alert.AlertType.ERROR, owner, "Warning","Existing email");
           		break;
           	}
           	if (columnDetail[2].equals(user)) {
           		check = false;
-          		showAlert(Alert.AlertType.ERROR, owner, "Warning","Existed Username!!!!");
+          		showAlert(Alert.AlertType.ERROR, owner, "Warning","Existed username");
           		break;
           	}
           	line = br.readLine();
@@ -164,6 +179,7 @@ public class RevoTeaController {
           if (check) {
           inserNewCustomer(file,name, email, user, password);
           showAlert(Alert.AlertType.CONFIRMATION, owner, "Registration Successful!",  "Welcome " + nameField.getText());
+          switchToLogin(event);
           br.close();
       }}
       public static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
@@ -193,7 +209,6 @@ public class RevoTeaController {
           Writer writer = null;
           System.out.println(name + "\t" + email + "\t" + user + "\t" + password + "\n");
           try {
-          	//System.out.println(file.getAbsolutePath());
               fos = new FileOutputStream(file.getAbsolutePath(), true);
               writer = new OutputStreamWriter(fos, "UTF-8");
 

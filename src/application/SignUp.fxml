@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" prefHeight="55.0" prefWidth="500.0" style="-fx-background-color: f8e192;" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
+<GridPane alignment="center" hgap="10" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: f8e192;" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
     <padding><Insets bottom="40" left="40" right="40" top="40" /></padding>
     <columnConstraints>
         <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="100" prefWidth="100">
@@ -48,7 +48,7 @@
     <Label text="UserName : " GridPane.columnIndex="0" GridPane.rowIndex="3">
     </Label>
     <!-- Add username Text Field -->
-    <TextField fx:id="usernameField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <TextField fx:id="usernameField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 	
 	
 
@@ -60,14 +60,17 @@
 
 
     <!-- Add Submit Button -->
-    <Button fx:id="submitButton" text="Submit"
-            prefWidth="100" prefHeight="40" defaultButton="true"
-            GridPane.columnIndex="0" GridPane.rowIndex="5"
-            GridPane.columnSpan="2" GridPane.rowSpan="1"
-            GridPane.halignment="CENTER"
-            onAction="#SignUp">
+    <Button fx:id="submitButton" defaultButton="true" onAction="#SignUp" prefHeight="40" prefWidth="100" text="Submit" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.rowSpan="1">
         <GridPane.margin>
-            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+            <Insets bottom="20" left="0" right="0" top="20" />
         </GridPane.margin>
     </Button>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>
