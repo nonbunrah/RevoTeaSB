@@ -9,10 +9,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -21,16 +23,38 @@ public class RevoTeaController {
 	private Scene scene;
 	private Parent root;
 	
+	Double bobaPrice = 3.00;
+	int cartCount = 0;
+	
+	@FXML
+    private Label ordersInCart;
+	
+	public void counterPlus(ActionEvent event) throws IOException {
+		cartCount++;
+		ordersInCart.setText("Orders in Cart: " + cartCount);
+	}
+	
+	
 	public void switchToToppings(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/Toppings.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
+		cartCount++;
+		ordersInCart.setText("orders:" + cartCount);
 	};
 	
 	public void switchToBobaOrder(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/BobaOrder.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	};
+	
+	public void switchToOrderConfirmation(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("/application/OrderConfirmation.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -57,6 +81,14 @@ public class RevoTeaController {
 
     @FXML
     private Button submitButton;
+    
+    @FXML
+    private Label labelId;
+    
+    @FXML
+    public void newButtonClick(KeyEvent event) {
+         labelId.setText("not label");
+    }
 
     @FXML
     public void SignUp(ActionEvent event) throws Exception {
@@ -94,4 +126,5 @@ public class RevoTeaController {
         alert.initOwner(owner);
         alert.show();
     }
+    
 }

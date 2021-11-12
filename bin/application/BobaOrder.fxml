@@ -46,7 +46,7 @@
             <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxHeight="100.0" maxWidth="167.0" mnemonicParsing="false" onAction="#switchToToppings" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="1">
+            <Button id="beelongId" maxHeight="100.0" maxWidth="167.0" mnemonicParsing="false" onAction="#switchToToppings" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -55,7 +55,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button id="blackSesameHojiId" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -64,7 +64,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button id="brownSugarMilkId" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -73,7 +73,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="2">
+            <Button id="hongKongMtId" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="2">
                <graphic>
                   <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -183,6 +183,11 @@
             </Button>
          </children>
       </GridPane>
+      <Label fx:id="ordersInCart" alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="506.0" text="Orders in Cart: 0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
             <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
@@ -193,7 +198,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Checkout">
+            <Button mnemonicParsing="false" onAction="#switchToOrderConfirmation" prefWidth="100.0" text="Checkout">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
