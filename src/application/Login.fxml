@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane accessibleText="ReVo Tea" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: f8e192;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
+   <children>
+      <Button alignment="CENTER" layoutX="203.0" layoutY="361.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="39.0" prefWidth="95.0" text="SignUp">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="169.0" layoutY="428.0" mnemonicParsing="false" text="Checkout as Guest">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="203.0" layoutY="295.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtUsername" alignment="CENTER" layoutX="139.0" layoutY="167.0" promptText="UserName">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="138.0" layoutY="231.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="lblStatus" layoutX="11.0" layoutY="131.0" text="Status">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label alignment="CENTER" layoutX="123.0" layoutY="14.0" prefHeight="60.0" prefWidth="319.0" text="Revo Tea" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
