@@ -1,6 +1,6 @@
 package application;
-import java.io.IOException;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.fxml.FXML;
@@ -11,8 +11,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+
 public class RevoTeaController {
 	private Stage stage;
 	private Scene scene;
@@ -33,10 +36,15 @@ public class RevoTeaController {
 		stage.setScene(scene);
 		stage.show();
 	};
-	
-	public void switchToScene2(ActionEvent event) {
-		
-	};
+
+    @FXML
+    private ImageView TYimage;
+
+    @FXML
+    void submitButton(ActionEvent event) {
+        Image TYImg = new Image(getClass().getResourceAsStream("image/topping/TYOrder.png"));
+        TYimage.setImage(TYImg);
+    }
 	
 	@FXML
     private TextField nameField;

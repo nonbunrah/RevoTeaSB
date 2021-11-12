@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: f8e192;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SubmitController">
+<AnchorPane prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: f8e192;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
    <children>
-      <Button fx:id="submitButton" layoutX="121.0" layoutY="498.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#buttonPressed" prefHeight="65.0" prefWidth="258.0" style="-fx-background-color: C8EAAF;" text="Submit" textFill="#1e0101">
+      <Button fx:id="submitButton" layoutX="121.0" layoutY="498.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#submitButton" prefHeight="65.0" prefWidth="258.0" style="-fx-background-color: C8EAAF;" text="Submit" textFill="#1e0101">
          <font>
             <Font size="25.0" />
          </font></Button>
@@ -31,7 +31,7 @@
          </font></TextField>
       <ImageView fx:id="TYimage" fitHeight="194.0" fitWidth="212.0" layoutX="153.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/CreditCard.png" />
+            <Image url="@../../bin/application/image/drink/CreditCard.png" />
          </image>
       </ImageView>
    </children>
