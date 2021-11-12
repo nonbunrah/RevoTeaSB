@@ -33,7 +33,7 @@ public class RevoTeaController {
 		primaryStage.show();
         Window owner = submitButton.getScene().getWindow();
         if(nameField.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, owner, "Form Error!", 
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "Please enter your name");
             return;
         }

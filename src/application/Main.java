@@ -11,7 +11,6 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			VBox root = (VBox)FXMLLoader.load(getClass().getResource("RevoTea.fxml"));
 			Parent root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
 			
 			Scene scene = new Scene(root,500,800);
