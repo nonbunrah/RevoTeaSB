@@ -42,10 +42,10 @@ public class RevoTeaController {
 	@FXML
     private Label ordersInCart;
 	
-	public void login(ActionEvent event) throws IOException {
+	public void sendData(ActionEvent event) throws IOException {
 		String username = nameTextField.getText();
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/OrderConfirmation.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/Toppings.fxml"));
 		root = loader.load();
 		
 		RevoTeaController2 scene2Controller = loader.getController();
@@ -234,7 +234,43 @@ public class RevoTeaController {
               alert.setContentText("Error: " + br.getMessage());
 
           }
-          //*************End SignUp***************************** 
-    
       }
+          //*************End SignUp***************************** 
+      
+    //*************Login ***************************** 
+       @FXML
+       private TextField logUsername;
+       @FXML
+       private TextField logPassword;
+       @FXML
+       private Label lblStatus;
+       
+       public void Login(ActionEvent event) throws Exception {
+       	//Window owner = loginButton.getScene().getWindow();
+       	
+           BufferedReader br = new BufferedReader(new FileReader(FileName));
+           String line = br.readLine();
+           System.out.println(line);
+           while (line != null) {
+           	String[] columnDetail = line.split("\t", -1);
+           	if (columnDetail[2].equals(logUsername.getText())) {
+           			if (columnDetail[3].equals(logPassword.getText()))  {
+           		//System.out.println(columnDetail[1]);
+           		lblStatus.setText("Login Successful");
+           		switchToBobaOrder(event);
+           		break;
+           	}
+           			else {
+           		lblStatus.setText("Wrong Password");
+           		break;
+           			}
+           	}
+           	else {
+           		lblStatus.setText("Wrong username or username not exist");
+           	}
+           	line = br.readLine();
+           	br.close();
+           ///**** End Login
+           }
+       }
 }

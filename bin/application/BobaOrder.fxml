@@ -207,6 +207,6 @@
             </Button>
          </children>
       </HBox>
-      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="Send data" />
+      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#sendData" text="Send data" />
    </children>
 </VBox>

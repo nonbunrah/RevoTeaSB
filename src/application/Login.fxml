@@ -20,17 +20,17 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="203.0" layoutY="295.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="Login">
+      <Button alignment="CENTER" layoutX="203.0" layoutY="295.0" mnemonicParsing="false" onAction="#Login" prefHeight="39.0" prefWidth="95.0" text="Login">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txtUsername" alignment="CENTER" layoutX="139.0" layoutY="167.0" promptText="UserName">
+      <TextField fx:id="logUsername" alignment="CENTER" layoutX="139.0" layoutY="167.0" promptText="UserName">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="138.0" layoutY="231.0" promptText="Password">
+      <PasswordField fx:id="logPassword" alignment="CENTER" layoutX="138.0" layoutY="231.0" promptText="Password">
          <font>
             <Font size="18.0" />
          </font>
