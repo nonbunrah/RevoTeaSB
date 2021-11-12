@@ -28,6 +28,10 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class RevoTeaController {
+	
+	@FXML
+	TextField nameTextField;
+	
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
@@ -38,13 +42,20 @@ public class RevoTeaController {
 	@FXML
     private Label ordersInCart;
 	
-	public void counterPlus(ActionEvent event) throws IOException {
-		cartCount++;
-		ordersInCart.setText("Orders in Cart: " + cartCount);
+	public void login(ActionEvent event) throws IOException {
+		String username = nameTextField.getText();
+		
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/OrderConfirmation.fxml"));
+		root = loader.load();
+		
+		RevoTeaController2 scene2Controller = loader.getController();
+		scene2Controller.displayName(username);
+		
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
 	}
-	
-	@FXML
-	private Button beelongTeaLblButton;
 	
 	public void switchToLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
