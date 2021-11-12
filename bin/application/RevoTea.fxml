@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="97.0" prefWidth="500.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="500.0" style="-fx-background-color: lightgray;" text="RevoTea" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="48.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="55.0" prefWidth="500.0" text="Order" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER" prefHeight="507.0" prefWidth="500.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button maxHeight="100.0" maxWidth="167.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Black_Sesam_Hoji.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/brown_sugar_milk.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Hong_Kong_MT.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/House_coffee.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxHeight="100.0" maxWidth="168.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="157.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Lavender_Rose.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Lychee_refresher.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Matcha_Latte.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="91.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Milk_Trifecta.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Taro_milk.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Thai_coffee.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Thai_tea.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Viet_coffee.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Watermelon_Oat.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/image/drink/Yokult_Green_Tea.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
+         <children>
+            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefWidth="100.0" text="Checkout">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
