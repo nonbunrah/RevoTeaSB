@@ -65,6 +65,14 @@ public class RevoTeaController {
 		stage.show();
 	};
 	
+	public void switchToLogout(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	};
+	
 	public void switchToSignUp(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/SignUp.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();

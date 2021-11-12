@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -13,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #f7eb8b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RevoTeaController">
    <children>
       <HBox prefHeight="97.0" prefWidth="500.0">
          <children>
@@ -32,156 +37,252 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" prefHeight="507.0" prefWidth="500.0">
+      <GridPane alignment="CENTER" prefHeight="413.0" prefWidth="500.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints />
-          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="150.0" minHeight="100.0" prefHeight="139.0" />
+          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button id="beelongId" maxHeight="100.0" maxWidth="167.0" mnemonicParsing="false" onAction="#switchToToppings" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <VBox prefHeight="94.0" prefWidth="167.0">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button id="blackSesameHojiId" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove1" mnemonicParsing="false" onAction="#removeBtn1" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn1" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/Black_Sesam_Hoji.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button id="brownSugarMilkId" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove2" mnemonicParsing="false" onAction="#removeBtn2" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn2" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="2">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/brown_sugar_milk.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button id="hongKongMtId" mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="2">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove3" mnemonicParsing="false" onAction="#removeBtn3" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn3" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/Hong_Kong_MT.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove4" mnemonicParsing="false" onAction="#removeBtn4" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn4" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/House_coffee.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button maxHeight="100.0" maxWidth="168.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="157.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <graphic>
-                  <ImageView fitHeight="93.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove5" mnemonicParsing="false" onAction="#removeBtn5" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn5" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/Lavender_Rose.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="3">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove6" mnemonicParsing="false" onAction="#removeBtn6" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn6" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/Lychee_refresher.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove7" mnemonicParsing="false" onAction="#removeBtn7" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn7" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/Matcha_Latte.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <graphic>
-                  <ImageView fitHeight="91.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove8" mnemonicParsing="false" onAction="#removeBtn8" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn8" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="94.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/drink/Milk_Trifecta.JPG" />
+                        <Image url="@../../bin/application/image/drink/BeeLong.JPG" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="9.0" />
+                     </VBox.margin>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="4">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../bin/application/image/drink/Taro_milk.JPG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../bin/application/image/drink/Thai_coffee.JPG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../bin/application/image/drink/Thai_tea.JPG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.rowIndex="5">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../bin/application/image/drink/Viet_coffee.JPG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../bin/application/image/drink/Watermelon_Oat.JPG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
-               <graphic>
-                  <ImageView fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../bin/application/image/drink/Yokult_Green_Tea.JPG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="remove9" mnemonicParsing="false" onAction="#removeBtn9" prefWidth="65.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="Remove">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addBtn9" prefWidth="65.0" style="-fx-background-color: lightgreen;" text="Add" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
       </GridPane>
       <Label fx:id="ordersInCart" alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="506.0" text="Orders in Cart: 0" textAlignment="CENTER">
@@ -189,10 +290,9 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTextField" />
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
-            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
+            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" onAction="#switchToLogout" text="Logout">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -207,6 +307,5 @@
             </Button>
          </children>
       </HBox>
-      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#sendData" text="Send data" />
    </children>
 </VBox>
