@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Calendar;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -372,7 +373,61 @@ public class RevoTeaController {
     	  totalOrder.setText("Total: $" + df.format(total));
        }
        
-       // not used yet
+     //************** Credit Card******************// 
+       @FXML
+       private TextField cardField;
+       @FXML
+       private TextField monthField;
+       @FXML
+       private TextField yearField;
+       @FXML
+       private TextField codeField;
+       @FXML
+       private Label status1, status2, status3;
+       // Check: the length of the card number must be 16
+       // Check: month is valid 
+       // Check: year
+       public void CreditCard(ActionEvent event) throws Exception {
+    	  if (cardField.getText().length() != 19 && cardField.getText().length() != 16) {
+    		  System.out.println(cardField.getText().length() );
+    		  status1.setText("Invalid Card Number");
+    		  return;
+    	  }
+    	 
+    	  int month = Integer.valueOf(monthField.getText());
+    	  int year = Integer.valueOf(yearField.getText());
+    	  
+    	  if (month >12 && month > 1) {
+    		  status2.setText("Invalid Month");
+    		  return;
+    	  }
+    	  int year_now = Calendar.getInstance().get(Calendar.YEAR);
+    	  if (year >year_now + 10){
+    		  status2.setText("Invalid Year");
+    		  return;
+    	  }
+    	  if (year <year_now){
+    		  System.out.println(year_now );
+    		  status2.setText("Expired Card");	  
+    		  return;
+    	  }
+    	  if (codeField.getText().length() != 3 ) {
+    		  status3.setText("Invalid Security Code");
+    		  return;
+    	  }
+    	  else {
+    		  status1.setText("");
+    		  status2.setText("");
+    		  status3.setText("");
+    	  }
+    	  
+    	  Image TYImg = new Image(getClass().getResourceAsStream("image/topping/TYOrder.png"));
+          TYimage.setImage(TYImg);
+   	      wipeFile(event);
+    	  
+       }
+       //******** End Credit Card
+       
        public void wipeFile(ActionEvent event) throws IOException {
     	   File file = new File("bin/application/BobaOrder.txt");
     	   PrintWriter writer = new PrintWriter(file);
