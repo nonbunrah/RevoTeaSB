@@ -34,9 +34,14 @@ public class RevoTeaController {
 	@FXML
 	TextField nameTextField;
 	
+	@FXML
+	Label cartItems;
+	Label totalOrder;
+	
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
+    private static int bobaCountCart = 0;
 	
 	Double bobaPrice = 3.00;
 	int cartCount = 0;
@@ -45,9 +50,9 @@ public class RevoTeaController {
     private Label ordersInCart;
 	
 	public void sendData(ActionEvent event) throws IOException {
-		String username = nameTextField.getText();
+		String username = "hello";
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/BobaOrder.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/OrderConfirmation.fxml"));
 		root = loader.load();
 		
 		RevoTeaController2 scene2Controller = loader.getController();
@@ -129,7 +134,6 @@ public class RevoTeaController {
     public void newButtonClick(KeyEvent event) {
          labelId.setText("not label");
     }
-    
     
     
     //Buttons for Adding/Removing
@@ -346,19 +350,21 @@ public class RevoTeaController {
        }
        
        public void readFile(ActionEvent event) throws IOException {
-    	   int bobaCount = 0;
     	   File file = new File("bin/application/BobaOrder.txt");
     	   Scanner scan = new Scanner(file);
     	   while (scan.hasNextLine()) {
     		   scan.nextLine();
-    		   bobaCount++;
+    		   bobaCountCart++;
     	   }
-    	   System.out.println(bobaCount);
+    	   System.out.println("final:" + bobaCountCart);
     	   scan.close();
-    	   // wipe file after done
-    	   wipeFile(event);
        }
        
+       public void addCartTotal(ActionEvent event) throws IOException {
+    	  cartItems.setText("hello");
+       }
+       
+       // not used yet
        public void wipeFile(ActionEvent event) throws IOException {
     	   File file = new File("bin/application/BobaOrder.txt");
     	   PrintWriter writer = new PrintWriter(file);

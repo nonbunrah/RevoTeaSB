@@ -26,12 +26,12 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="544.0" text="Items in Cart: 0" textAlignment="CENTER">
+      <Label fx:id="cartItems" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="544.0" text="Items in Cart: 0" textAlignment="CENTER">
          <font>
             <Font name="Arial" size="22.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="544.0" text="Total: $0.00" textAlignment="CENTER">
+      <Label fx:id="orderTotal" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="544.0" text="Total: $0.00" textAlignment="CENTER">
          <font>
             <Font name="Arial" size="22.0" />
          </font>

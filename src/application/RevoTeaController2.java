@@ -6,9 +6,11 @@ import javafx.scene.control.Label;
 public class RevoTeaController2 {
 	
 	@FXML
-	Label nameLabel;
+	Label cartItems;
 	
 	public void displayName(String username) {
-		nameLabel.setText(username);
+		cartItems.setText(username);
 	}
+	
+	
 }
