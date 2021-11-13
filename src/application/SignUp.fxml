@@ -74,7 +74,7 @@
        </Button>
       <ImageView depthTest="DISABLE" fitHeight="243.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
          <image>
-            <Image url="@../../../../Downloads/SignUp.png" />
+            <Image url="@../../bin/application/image/drink/SignUp.png" />
          </image>
       </ImageView>
    </children>
