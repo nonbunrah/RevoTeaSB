@@ -1,5 +1,8 @@
 package application;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -65,6 +68,8 @@ public class RevoTeaController {
 //		stage.setScene(scene);
 //		stage.show();
 //	}
+	
+	private static final DecimalFormat df = new DecimalFormat("0.00");
 	
 	public void switchToLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
@@ -363,14 +368,9 @@ public class RevoTeaController {
        @FXML
        public void addCartTotal(ActionEvent event) throws IOException {
     	  cartItems.setText("Items in Cart: " + bobaCountCart);
-//    	  double total = bobaCountCart * 3.00;
-//    	  totalOrder.setText("Total: $ dudde");
+    	  double total = bobaCountCart * 3.99;
+    	  totalOrder.setText("Total: $" + df.format(total));
        }
-       
-//       @FXML
-//       public void addTotalOrder(ActionEvent event) throws IOException {
-//    	   totalOrder.setText("Total: $dude");
-//       }
        
        // not used yet
        public void wipeFile(ActionEvent event) throws IOException {
