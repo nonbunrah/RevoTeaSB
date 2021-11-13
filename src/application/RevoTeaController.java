@@ -6,7 +6,9 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
@@ -103,6 +105,15 @@ public class RevoTeaController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
+		readFile(event);
+	};
+	
+	public void switchToPayment(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("/application/CreditCard.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
 	};
 
     @FXML
@@ -139,9 +150,10 @@ public class RevoTeaController {
     }
     
     @FXML
-    void addBtn1(ActionEvent event) {
+    void addBtn1(ActionEvent event) throws IOException {
     	aCount++;	 
 		 ordersInCart.setText("Orders in Cart: " + aCount);
+		 insertBobaCount(BobaCount);
     }    
     
     
@@ -304,5 +316,53 @@ public class RevoTeaController {
            	br.close();
            ///**** End Login
            }
+       }
+       
+       // write price to text file
+       
+       private final static String FileNamePrice = "bin/application/BobaOrder.txt";
+       private final static File filePrice = new File(FileNamePrice);
+       private final int BobaCount = 1;
+       
+       public static void insertBobaCount(int BobaCount) throws IOException 
+       {
+       	FileOutputStream fos = null;
+           Writer writer = null;
+           try {
+               fos = new FileOutputStream(filePrice.getAbsolutePath(), true);
+               writer = new OutputStreamWriter(fos, "UTF-8");
+
+               writer.write(BobaCount + "\n");
+               writer.flush();
+               writer.close();
+
+           } catch (IOException br) {
+               Alert alert = new Alert(AlertType.ERROR);
+               alert.setTitle("Error");
+               alert.setHeaderText("Error Encountered");
+               alert.setContentText("Error: " + br.getMessage());
+
+           }
+       }
+       
+       public void readFile(ActionEvent event) throws IOException {
+    	   int bobaCount = 0;
+    	   File file = new File("bin/application/BobaOrder.txt");
+    	   Scanner scan = new Scanner(file);
+    	   while (scan.hasNextLine()) {
+    		   scan.nextLine();
+    		   bobaCount++;
+    	   }
+    	   System.out.println(bobaCount);
+    	   scan.close();
+    	   // wipe file after done
+    	   wipeFile(event);
+       }
+       
+       public void wipeFile(ActionEvent event) throws IOException {
+    	   File file = new File("bin/application/BobaOrder.txt");
+    	   PrintWriter writer = new PrintWriter(file);
+    	   writer.print("");
+    	   writer.close();
        }
 }
