@@ -36,6 +36,8 @@ public class RevoTeaController {
 	
 	@FXML
 	Label cartItems;
+	
+	@FXML
 	Label totalOrder;
 	
 	private Stage stage;
@@ -49,20 +51,20 @@ public class RevoTeaController {
 	@FXML
     private Label ordersInCart;
 	
-	public void sendData(ActionEvent event) throws IOException {
-		String username = "hello";
-		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/OrderConfirmation.fxml"));
-		root = loader.load();
-		
-		RevoTeaController2 scene2Controller = loader.getController();
-		scene2Controller.displayName(username);
-		
-		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
-	}
+//	public void sendData(ActionEvent event) throws IOException {
+//		String username = "hello";
+//		
+//		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/OrderConfirmation.fxml"));
+//		root = loader.load();
+//		
+//		RevoTeaController2 scene2Controller = loader.getController();
+//		scene2Controller.displayName(username);
+//		
+//		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//		scene = new Scene(root);
+//		stage.setScene(scene);
+//		stage.show();
+//	}
 	
 	public void switchToLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
@@ -125,9 +127,10 @@ public class RevoTeaController {
     private ImageView TYimage;
 
     @FXML
-    void submitButton(ActionEvent event) {
+    void submitButton(ActionEvent event) throws IOException {
         Image TYImg = new Image(getClass().getResourceAsStream("image/topping/TYOrder.png"));
         TYimage.setImage(TYImg);
+ 	    wipeFile(event);
     }
     
     @FXML
@@ -283,9 +286,9 @@ public class RevoTeaController {
 
           }
       }
-          //*************End SignUp***************************** 
+      //*************End SignUp***************************** 
       
-    //*************Login ***************************** 
+      //*************Login ***************************** 
        @FXML
        private TextField logUsername;
        @FXML
@@ -294,7 +297,6 @@ public class RevoTeaController {
        private Label lblStatus;
        
        public void Login(ActionEvent event) throws Exception {
-       	//Window owner = loginButton.getScene().getWindow();
        	
            BufferedReader br = new BufferedReader(new FileReader(FileName));
            String line = br.readLine();
@@ -321,8 +323,6 @@ public class RevoTeaController {
            ///**** End Login
            }
        }
-       
-       // write price to text file
        
        private final static String FileNamePrice = "bin/application/BobaOrder.txt";
        private final static File filePrice = new File(FileNamePrice);
@@ -360,9 +360,17 @@ public class RevoTeaController {
     	   scan.close();
        }
        
+       @FXML
        public void addCartTotal(ActionEvent event) throws IOException {
-    	  cartItems.setText("hello");
+    	  cartItems.setText("Items in Cart: " + bobaCountCart);
+//    	  double total = bobaCountCart * 3.00;
+//    	  totalOrder.setText("Total: $ dudde");
        }
+       
+//       @FXML
+//       public void addTotalOrder(ActionEvent event) throws IOException {
+//    	   totalOrder.setText("Total: $dude");
+//       }
        
        // not used yet
        public void wipeFile(ActionEvent event) throws IOException {

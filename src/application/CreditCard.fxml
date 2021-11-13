@@ -14,7 +14,7 @@
          <font>
             <Font size="25.0" />
          </font></Button>
-      <Button layoutX="121.0" layoutY="609.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="258.0" style="-fx-background-color: FCCABF;" text="Go Back">
+      <Button layoutX="121.0" layoutY="609.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="258.0" style="-fx-background-color: FCCABF;" onAction="#switchToOrderConfirmation" text="Go Back">
          <font>
             <Font size="25.0" />
          </font></Button>

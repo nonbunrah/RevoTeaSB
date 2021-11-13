@@ -31,7 +31,7 @@
             <Font name="Arial" size="22.0" />
          </font>
       </Label>
-      <Label fx:id="orderTotal" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="544.0" text="Total: $0.00" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="544.0" text="Total: $0.00" textAlignment="CENTER">
          <font>
             <Font name="Arial" size="22.0" />
          </font>
@@ -49,12 +49,17 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="100.0" text="Go To Cart">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="100.0" onAction="#switchToPayment" text="Checkout">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
          </children>
       </HBox>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addCartTotal" text="Update Total" textAlignment="CENTER">
+         <VBox.margin>
+            <Insets left="206.0" />
+         </VBox.margin>
+      </Button>
    </children>
 </VBox>
