@@ -48,7 +48,7 @@
                <children>
                   <ImageView fitHeight="90.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Black_bubble.JPG" />
+                        <Image url="@resource/image/topping/Black_bubble.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -65,7 +65,7 @@
                <children>
                   <ImageView fitHeight="100.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Cheese_cream.JPG" />
+                        <Image url="@resource/image/topping/Cheese_cream.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -82,7 +82,7 @@
                <children>
                   <ImageView fitHeight="90.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Coffee_Jelly.JPG" />
+                        <Image url="@resource/image/topping/Coffee_Jelly.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -99,7 +99,7 @@
                <children>
                   <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/GreenTea_Jelly.JPG" />
+                        <Image url="@resource/image/topping/Coconut_Jelly.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -116,7 +116,7 @@
                <children>
                   <ImageView fitHeight="89.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Lychee_popping.JPG" />
+                        <Image url="@resource/image/topping/Lychee_popping.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -133,7 +133,7 @@
                <children>
                   <ImageView fitHeight="84.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Rainbow_Jelly.JPG" />
+                        <Image url="@resource/image/topping/Mango_Jelly.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -150,7 +150,7 @@
                <children>
                   <ImageView fitHeight="98.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Strawberry_popping.JPG" />
+                        <Image url="@resource/image/topping/Red_Bean.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -167,7 +167,7 @@
                <children>
                   <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Whip_cream.JPG" />
+                        <Image url="@resource/image/topping/Whip_cream.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -184,7 +184,7 @@
                <children>
                   <ImageView fitHeight="97.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../bin/application/image/topping/Mango_Jelly.JPG" />
+                        <Image url="@resource/image/topping/White_pearl.JPG" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" />
@@ -201,7 +201,7 @@
       </GridPane>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
-            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #ff5252;" onAction="#switchToBobaOrder" text="Go Back">
+            <Button mnemonicParsing="false" onAction="#switchToBobaOrder" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

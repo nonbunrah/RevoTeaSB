@@ -6,3 +6,6 @@ eric	eric@eric.com	eric	eric
 asdf	asdfdaf@dsadsaf.com	sdfsaf	asdfdsa
 fidhspafh	fhdisapghaipo@ghdipasg.com	dospahgio	sdpaoghi
 ericeric	ericeric@eric.com	ericeric	ericeric
+a	a@a.com	a	a
+b	b@b.com	b	b
+d	d@d.com	d	d

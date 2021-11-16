@@ -1,8 +1,5 @@
 package application;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,14 +8,15 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -55,25 +53,10 @@ public class RevoTeaController {
 	@FXML
     private Label ordersInCart;
 	
-//	public void sendData(ActionEvent event) throws IOException {
-//		String username = "hello";
-//		
-//		FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/OrderConfirmation.fxml"));
-//		root = loader.load();
-//		
-//		RevoTeaController2 scene2Controller = loader.getController();
-//		scene2Controller.displayName(username);
-//		
-//		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//		scene = new Scene(root);
-//		stage.setScene(scene);
-//		stage.show();
-//	}
-	
 	private static final DecimalFormat df = new DecimalFormat("0.00");
 	
 	public void switchToLogin(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
+		root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -81,7 +64,7 @@ public class RevoTeaController {
 	};
 	
 	public void switchToLogout(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/Login.fxml"));
+		root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -89,7 +72,7 @@ public class RevoTeaController {
 	};
 	
 	public void switchToSignUp(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/SignUp.fxml"));
+		root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -97,7 +80,7 @@ public class RevoTeaController {
 	};
 	
 	public void switchToToppings(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/Toppings.fxml"));
+		root = FXMLLoader.load(getClass().getResource("Toppings.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -105,7 +88,7 @@ public class RevoTeaController {
 	};
 	
 	public void switchToBobaOrder(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/BobaOrder.fxml"));
+		root = FXMLLoader.load(getClass().getResource("BobaOrder.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -113,7 +96,7 @@ public class RevoTeaController {
 	};
 	
 	public void switchToOrderConfirmation(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/OrderConfirmation.fxml"));
+		root = FXMLLoader.load(getClass().getResource("OrderConfirmation.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -122,7 +105,7 @@ public class RevoTeaController {
 	};
 	
 	public void switchToPayment(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("/application/CreditCard.fxml"));
+		root = FXMLLoader.load(getClass().getResource("CreditCard.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -134,7 +117,7 @@ public class RevoTeaController {
 
     @FXML
     void submitButton(ActionEvent event) throws IOException {
-        Image TYImg = new Image(getClass().getResourceAsStream("image/topping/TYOrder.png"));
+        Image TYImg = new Image(getClass().getResourceAsStream("TYOrder.png"));
         TYimage.setImage(TYImg);
  	    wipeFile(event);
     }
@@ -188,12 +171,14 @@ public class RevoTeaController {
       
       @FXML
       private Label labelId;
-      private final String FileName = "bin/application/customerInfo.txt";
+      private final String FileName = "./src/application/resource/customerInfo.txt";
+      
       private String name, email,user,password;
       private final File file = new File(FileName);
       
       @FXML
       public void SignUp(ActionEvent event) throws Exception {
+    	  System.out.println("abs path: " + new File(FileName).getAbsoluteFile());
           Window owner = submitButton.getScene().getWindow();
           name = nameField.getText();
           email = emailField.getText();
@@ -325,12 +310,12 @@ public class RevoTeaController {
            		lblStatus.setText("Wrong username or username not exist");
            	}
            	line = br.readLine();
-           	br.close();
            ///**** End Login
            }
+          br.close();
        }
        
-       private final static String FileNamePrice = "bin/application/BobaOrder.txt";
+       private final static String FileNamePrice = "./src/application/resource/BobaOrder.txt";
        private final static File filePrice = new File(FileNamePrice);
        private final int BobaCount = 1;
        
@@ -356,7 +341,7 @@ public class RevoTeaController {
        }
        
        public void readFile(ActionEvent event) throws IOException {
-    	   File file = new File("bin/application/BobaOrder.txt");
+    	   File file = new File("./src/application/resource/BobaOrder.txt");
     	   Scanner scan = new Scanner(file);
     	   while (scan.hasNextLine()) {
     		   scan.nextLine();
@@ -421,7 +406,7 @@ public class RevoTeaController {
     		  status3.setText("");
     	  }
     	  
-    	  Image TYImg = new Image(getClass().getResourceAsStream("image/topping/TYOrder.png"));
+    	  Image TYImg = new Image(getClass().getResourceAsStream("resource/image/topping/TYOrder.png"));
           TYimage.setImage(TYImg);
    	      wipeFile(event);
     	  
@@ -429,7 +414,7 @@ public class RevoTeaController {
        //******** End Credit Card
        
        public void wipeFile(ActionEvent event) throws IOException {
-    	   File file = new File("bin/application/BobaOrder.txt");
+    	   File file = new File("./src/application/resource/BobaOrder.txt");
     	   PrintWriter writer = new PrintWriter(file);
     	   writer.print("");
     	   writer.close();

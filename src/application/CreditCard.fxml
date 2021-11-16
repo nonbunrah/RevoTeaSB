@@ -14,7 +14,7 @@
          <font>
             <Font size="25.0" />
          </font></Button>
-      <Button layoutX="121.0" layoutY="609.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="258.0" style="-fx-background-color: FCCABF;" onAction="#switchToOrderConfirmation" text="Go Back">
+      <Button layoutX="121.0" layoutY="609.0" mnemonicParsing="false" onAction="#switchToOrderConfirmation" prefHeight="65.0" prefWidth="258.0" style="-fx-background-color: FCCABF;" text="Go Back">
          <font>
             <Font size="25.0" />
          </font></Button>
@@ -32,7 +32,7 @@
          </font></TextField>
       <ImageView fx:id="TYimage" fitHeight="194.0" fitWidth="212.0" layoutX="155.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../bin/application/image/drink/CreditCard.png" />
+            <Image url="@resource/image/drink/CreditCard.png" />
          </image>
       </ImageView>
       <Label layoutX="74.0" layoutY="239.0" prefHeight="17.0" prefWidth="138.0" text="Card Number">
