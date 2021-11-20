@@ -11,8 +11,14 @@ import java.io.Writer;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
+import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,6 +34,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -178,7 +185,6 @@ public class RevoTeaController {
       
       @FXML
       public void SignUp(ActionEvent event) throws Exception {
-    	  System.out.println("abs path: " + new File(FileName).getAbsoluteFile());
           Window owner = submitButton.getScene().getWindow();
           name = nameField.getText();
           email = emailField.getText();
@@ -287,6 +293,11 @@ public class RevoTeaController {
        @FXML
        private Label lblStatus;
        
+       public void updateLbl(ActionEvent event) throws Exception {
+      		lblStatus.setText("Login Successful");
+      		lblStatus.setTextFill(Color.LIGHTGREEN);
+       }
+       
        public void Login(ActionEvent event) throws Exception {
        	
            BufferedReader br = new BufferedReader(new FileReader(FileName));
@@ -296,8 +307,8 @@ public class RevoTeaController {
            	String[] columnDetail = line.split("\t", -1);
            	if (columnDetail[2].equals(logUsername.getText())) {
            			if (columnDetail[3].equals(logPassword.getText()))  {
-           		//System.out.println(columnDetail[1]);
-           		lblStatus.setText("Login Successful");
+//           		lblStatus.setText("Login Successful");
+//           		lblStatus.setTextFill(Color.LIGHTGREEN);
            		switchToBobaOrder(event);
            		break;
            	}
@@ -308,6 +319,7 @@ public class RevoTeaController {
            	}
            	else {
            		lblStatus.setText("Wrong username or username not exist");
+           		lblStatus.setTextFill(Color.RED);
            	}
            	line = br.readLine();
            ///**** End Login
