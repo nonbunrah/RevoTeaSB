@@ -11,14 +11,8 @@ import java.io.Writer;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Scanner;
-import java.util.concurrent.Executors;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
-import javafx.animation.AnimationTimer;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,13 +48,16 @@ public class RevoTeaController {
 	private Parent root;
     private static int bobaCountCart = 0;
 	
-	Double bobaPrice = 3.00;
-	int cartCount = 0;
 	int aCount = 0;
 	@FXML
     private Label ordersInCart;
 	
 	private static final DecimalFormat df = new DecimalFormat("0.00");
+	
+	public void clearOnLogin(ActionEvent event) throws IOException {
+		switchToLogin(event);
+		wipeFile(event);
+	}
 	
 	public void switchToLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("Login.fxml"));
@@ -309,6 +306,7 @@ public class RevoTeaController {
            			if (columnDetail[3].equals(logPassword.getText()))  {
 //           		lblStatus.setText("Login Successful");
 //           		lblStatus.setTextFill(Color.LIGHTGREEN);
+                wipeFile(event);
            		switchToBobaOrder(event);
            		break;
            	}
