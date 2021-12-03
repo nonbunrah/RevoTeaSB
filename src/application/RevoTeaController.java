@@ -2,6 +2,7 @@ package application;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -387,7 +388,21 @@ public class RevoTeaController {
     	  
        }
       
+       @FXML
+       void updateCart(ActionEvent event) throws FileNotFoundException {
+    	   
+    	   Scanner scanner = new Scanner (new File("./src/application/resource/BobaOrder.txt"));
+     	  
+     	  int [] list = new int [1]; 	 
+     	  int i = 0;
+     	  while(scanner.hasNextInt())
+     	  {
+     	       list[i++] = scanner.nextInt();
+     	  }
+     	 ordersInCart.setText("Orders in Cart: " + list[0]);
+       }
      
+       
      //************** Credit Card******************// 
        @FXML
        private TextField cardField;
