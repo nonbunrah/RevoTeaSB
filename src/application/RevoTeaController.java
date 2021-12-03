@@ -56,6 +56,7 @@ public class RevoTeaController {
 	
 	private static final DecimalFormat df = new DecimalFormat("0.00");
 	
+	
 	public void clearOnLogin(ActionEvent event) throws IOException {
 		switchToLogin(event);
 		wipeFile(event);
@@ -94,7 +95,8 @@ public class RevoTeaController {
 	};
 	
 	public void switchToBobaOrder(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("BobaOrder.fxml"));
+		
+		root = FXMLLoader.load(getClass().getResource("BobaOrder.fxml"));	
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -102,12 +104,9 @@ public class RevoTeaController {
 	};
 	
 	public void switchToOrderConfirmation(ActionEvent event) throws IOException {
+		
 		root = FXMLLoader.load(getClass().getResource("OrderConfirmation.fxml"));
-		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		if (aCount == 0)
-		{
-			topCount = 0;
-		}
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();	
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
@@ -122,9 +121,12 @@ public class RevoTeaController {
 		stage.show();
 	};
 
+	
+	//Pic for ty screen
     @FXML
     private ImageView TYimage;
 
+    //Trigger pic for thank you screen
     @FXML
     void submitButton(ActionEvent event) throws IOException {
         Image TYImg = new Image(getClass().getResourceAsStream("TYOrder.png"));
@@ -145,6 +147,8 @@ public class RevoTeaController {
     
     private Button add1;
     
+    
+   //Decrement count if remove button is clicked and store into file
     @FXML
     void removeBtn1(ActionEvent event) throws IOException {
     	aCount--;
@@ -159,7 +163,7 @@ public class RevoTeaController {
     }
     
     
-   
+  //Increment count if remove button is clicked and store into file
     @FXML
     public void addBtn1(ActionEvent event) throws IOException {
     	aCount +=1;	 
@@ -170,22 +174,9 @@ public class RevoTeaController {
 	    	writer.close();
     }    
     
-    @FXML
-    private CheckBox top1;
+  
 
-   
-    @FXML
-    void topTick(ActionEvent event) {
-    if (top1.isSelected())
-    	{
-    		topCount++;  
-    	}
-    else
-    	{
-    	topCount--;
-    	}   
-    }
-    
+ 
    
   //*********** SignUp******************************
   	  @FXML
@@ -210,6 +201,8 @@ public class RevoTeaController {
       private String name, email,user,password;
       private final File file = new File(FileName);
       
+      
+      //Sign up page to check if valid
       @FXML
       public void SignUp(ActionEvent event) throws Exception {
           Window owner = submitButton.getScene().getWindow();
@@ -288,6 +281,7 @@ public class RevoTeaController {
               return false;
           return pat.matcher(email).matches();
       }
+      
    // insert a new customer
       public static void inserNewCustomer(File file,String name, String email, String user, String password) throws IOException 
       {
@@ -325,6 +319,7 @@ public class RevoTeaController {
       		lblStatus.setTextFill(Color.LIGHTGREEN);
        }
        
+       
        public void Login(ActionEvent event) throws Exception {
        	
            BufferedReader br = new BufferedReader(new FileReader(FileName));
@@ -355,32 +350,7 @@ public class RevoTeaController {
           br.close();
        }
        
-     //  private final static String FileNamePrice = "./src/application/resource/BobaOrder.txt";
-      // private final static File filePrice = new File(FileNamePrice);
-      // private int BobaCount = 1;
-      
-       /*
-       public static void insertBobaCount(int BobaCount) throws IOException 
-       {
-       	FileOutputStream fos = null;
-           Writer writer = null;
-           try {
-               fos = new FileOutputStream(filePrice.getAbsolutePath(), true);
-               writer = new OutputStreamWriter(fos, "UTF-8");
-
-               writer.write(BobaCount + "\n");
-               writer.flush();
-               writer.close();
-
-           } catch (IOException br) {
-               Alert alert = new Alert(AlertType.ERROR);
-               alert.setTitle("Error");
-               alert.setHeaderText("Error Encountered");
-               alert.setContentText("Error: " + br.getMessage());
-
-           }
-       }
-       */
+       //Keeps count of bobaCart
        public void readFile(ActionEvent event) throws IOException {
    	   
     	   File file = new File("./src/application/resource/BobaOrder.txt");
@@ -394,6 +364,7 @@ public class RevoTeaController {
     	 
        }
        
+       //Sets the label and stores amount of drinks into file; add drinks cost
        @FXML
        public void addCartTotal(ActionEvent event) throws IOException {
     	
@@ -411,8 +382,7 @@ public class RevoTeaController {
     	  }
     	  
     	  double totalDrink = 3.99 * list[0];
-    	  double totalTop = 0.50 * topCount;
-    	  double totalSum = totalDrink + totalTop;
+    	  double totalSum = totalDrink;
     	  totalOrder.setText("Total: $" + df.format(totalSum));
     	
     	  
