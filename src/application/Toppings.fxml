@@ -228,7 +228,7 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToBobaOrder" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
+            <Button mnemonicParsing="false" name="goBackToppings" onAction="#switchToBobaOrder" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
