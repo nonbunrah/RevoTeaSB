@@ -23,7 +23,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -242,7 +241,6 @@ public class RevoTeaController {
           while (line != null) {
           	String[] columnDetail = line.split("\t", -1);
           	if (columnDetail[1].equals(email)) {
-          		System.out.println(columnDetail[1]);
           		check = false;
           		showAlert(Alert.AlertType.ERROR, owner, "Warning","Existing email");
           		break;
@@ -254,7 +252,6 @@ public class RevoTeaController {
           	}
           	line = br.readLine();
           }
-          System.out.println(check);
           if (check) {
           inserNewCustomer(file,name, email, user, password);
           showAlert(Alert.AlertType.CONFIRMATION, owner, "Registration Successful!",  "Welcome " + nameField.getText());
@@ -287,7 +284,6 @@ public class RevoTeaController {
       {
       	FileOutputStream fos = null;
           Writer writer = null;
-          System.out.println(name + "\t" + email + "\t" + user + "\t" + password + "\n");
           try {
               fos = new FileOutputStream(file.getAbsolutePath(), true);
               writer = new OutputStreamWriter(fos, "UTF-8");
@@ -324,13 +320,10 @@ public class RevoTeaController {
        	
            BufferedReader br = new BufferedReader(new FileReader(FileName));
            String line = br.readLine();
-           System.out.println(line);
            while (line != null) {
            	String[] columnDetail = line.split("\t", -1);
            	if (columnDetail[2].equals(logUsername.getText())) {
            			if (columnDetail[3].equals(logPassword.getText()))  {
-//           		lblStatus.setText("Login Successful");
-//           		lblStatus.setTextFill(Color.LIGHTGREEN);
                 wipeFile(event);
            		switchToBobaOrder(event);
            		break;
@@ -369,8 +362,6 @@ public class RevoTeaController {
        public void addCartTotal(ActionEvent event) throws IOException {
     	
     	  cartItems.setText("Items in Cart: " + aCount );
-    	 
-    	//  totalOrder.setText("Total: $" + df.format(total));
     	  
     	Scanner scanner = new Scanner (new File("./src/application/resource/BobaOrder.txt"));
     	  
@@ -381,7 +372,7 @@ public class RevoTeaController {
     	       list[i++] = scanner.nextInt();
     	  }
     	  
-    	  double totalDrink = 3.99 * list[0];
+    	  double totalDrink = 5.50 * list[0];
     	  double totalSum = totalDrink;
     	  totalOrder.setText("Total: $" + df.format(totalSum));
     	
@@ -419,7 +410,6 @@ public class RevoTeaController {
        // Check: year
        public void CreditCard(ActionEvent event) throws Exception {
     	  if (cardField.getText().length() != 19 && cardField.getText().length() != 16) {
-    		  System.out.println(cardField.getText().length() );
     		  status1.setText("Invalid Card Number");
     		  return;
     	  }
@@ -437,7 +427,6 @@ public class RevoTeaController {
     		  return;
     	  }
     	  if (year <year_now){
-    		  System.out.println(year_now );
     		  status2.setText("Expired Card");	  
     		  return;
     	  }
