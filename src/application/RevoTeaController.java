@@ -2,6 +2,7 @@ package application;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -22,6 +24,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -46,9 +49,10 @@ public class RevoTeaController {
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
-    private static int bobaCountCart = 0;
+    private static int bobaCountCart = 0;	
+	private static int aCount = 0;
+	private static int topCount = 0;
 	
-	int aCount = 0;
 	@FXML
     private Label ordersInCart;
 	
@@ -102,6 +106,10 @@ public class RevoTeaController {
 	public void switchToOrderConfirmation(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("OrderConfirmation.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		if (aCount == 0)
+		{
+			topCount = 0;
+		}
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
@@ -140,23 +148,47 @@ public class RevoTeaController {
     private Button add1;
     
     @FXML
-    void removeBtn1(ActionEvent event) {
+    void removeBtn1(ActionEvent event) throws IOException {
     	aCount--;
     	if (aCount < 0)
     	{
     		aCount = 0;
     	}
     	 ordersInCart.setText("Orders in Cart: " + aCount);
+    	 PrintWriter writer = new PrintWriter("./src/application/resource/BobaOrder.txt");
+	     writer.println(aCount);
+	     writer.close();
     }
     
+    
+   
     @FXML
-    void addBtn1(ActionEvent event) throws IOException {
-    	aCount++;	 
+    public void addBtn1(ActionEvent event) throws IOException {
+    	aCount +=1;	 
 		 ordersInCart.setText("Orders in Cart: " + aCount);
-		 insertBobaCount(BobaCount);
+		 //insertBobaCount(BobaCount);
+		 PrintWriter writer = new PrintWriter("./src/application/resource/BobaOrder.txt");
+	    	writer.println(aCount);
+	    	writer.close();
     }    
     
+    @FXML
+    private CheckBox top1;
+
+   
+    @FXML
+    void topTick(ActionEvent event) {
+    if (top1.isSelected())
+    	{
+    		topCount++;  
+    	}
+    else
+    	{
+    	topCount--;
+    	}   
+    }
     
+   
   //*********** SignUp******************************
   	  @FXML
       private TextField nameField;
@@ -325,10 +357,11 @@ public class RevoTeaController {
           br.close();
        }
        
-       private final static String FileNamePrice = "./src/application/resource/BobaOrder.txt";
-       private final static File filePrice = new File(FileNamePrice);
-       private final int BobaCount = 1;
-       
+     //  private final static String FileNamePrice = "./src/application/resource/BobaOrder.txt";
+      // private final static File filePrice = new File(FileNamePrice);
+      // private int BobaCount = 1;
+      
+       /*
        public static void insertBobaCount(int BobaCount) throws IOException 
        {
        	FileOutputStream fos = null;
@@ -349,25 +382,45 @@ public class RevoTeaController {
 
            }
        }
-       
+       */
        public void readFile(ActionEvent event) throws IOException {
+   	   
     	   File file = new File("./src/application/resource/BobaOrder.txt");
     	   Scanner scan = new Scanner(file);
+    	   
     	   while (scan.hasNextLine()) {
     		   scan.nextLine();
     		   bobaCountCart++;
     	   }
-    	   System.out.println("final:" + bobaCountCart);
-    	   scan.close();
+    	   
+    	 
        }
        
        @FXML
        public void addCartTotal(ActionEvent event) throws IOException {
-    	  cartItems.setText("Items in Cart: " + bobaCountCart);
-    	  double total = bobaCountCart * 3.99;
-    	  totalOrder.setText("Total: $" + df.format(total));
+    	
+    	  cartItems.setText("Items in Cart: " + aCount );
+    	 
+    	//  totalOrder.setText("Total: $" + df.format(total));
+    	  
+    	Scanner scanner = new Scanner (new File("./src/application/resource/BobaOrder.txt"));
+    	  
+    	  int [] list = new int [1]; 	 
+    	  int i = 0;
+    	  while(scanner.hasNextInt())
+    	  {
+    	       list[i++] = scanner.nextInt();
+    	  }
+    	  
+    	  double totalDrink = 3.99 * list[0];
+    	  double totalTop = 0.50 * topCount;
+    	  double totalSum = totalDrink + totalTop;
+    	  totalOrder.setText("Total: $" + df.format(totalSum));
+    	
+    	  
        }
-       
+      
+     
      //************** Credit Card******************// 
        @FXML
        private TextField cardField;
