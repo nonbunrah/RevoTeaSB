@@ -49,7 +49,6 @@ public class RevoTeaController {
 	private Parent root;
     private static int bobaCountCart = 0;	
 	private static int aCount = 0;
-	private static int topCount = 0;
 	
 	@FXML
     private Label ordersInCart;

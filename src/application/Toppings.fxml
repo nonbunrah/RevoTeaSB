@@ -55,7 +55,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -72,7 +72,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -89,7 +89,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -106,7 +106,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -123,7 +123,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -140,7 +140,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -157,7 +157,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -174,7 +174,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -191,7 +191,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <CheckBox fx:id="top9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#topTick" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="70.0" />
                      </VBox.margin>
@@ -228,7 +228,7 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="500.0">
          <children>
-            <Button mnemonicParsing="false" id="goBackToppings" name="goBackToppings" onAction="#switchToBobaOrder" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
+            <Button mnemonicParsing="false" id="goBackToppings" onAction="#switchToBobaOrder" prefWidth="100.0" style="-fx-background-color: #ff5252;" text="Go Back">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
